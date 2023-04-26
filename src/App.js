@@ -10,13 +10,14 @@ function App() {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const baseUrl = "https://reqres.in/api/users?page=1";
 
   const getUsers = async () => {
     setIsLoading(true);
     setError(null);
     setUsers([]);
     try {
-      const response = await axios.get("https://reqres.in/api/users?page=1");
+      const response = await axios.get(baseUrl);
       setIsLoading(false);
       setUsers(response.data.data);
     } catch (error) {
