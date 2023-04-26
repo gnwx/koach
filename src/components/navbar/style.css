@@ -1,0 +1,28 @@
+:root {
+  --bg-navbar: #fbf376;
+  --button-hover: #ffffff;
+}
+
+.navbar {
+  background-color: var(--bg-navbar);
+  padding: 20px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar button {
+  border: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-family: "Poppins";
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  cursor: pointer;
+  background-color: var(--button-hover);
+}
